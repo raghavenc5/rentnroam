@@ -17,7 +17,7 @@ if ($this->session->flashdata('sm_verification')) {
 }
 ?>
 
-<div class="container" style="padding-top: 180px;">
+<div class="container" style="padding-top: 165px;">
     <div class="row">
         <div class="col-md-12">
             <div class="super_global_error_handler alert alert-danger" style="display:none;">
@@ -163,7 +163,7 @@ if ($this->session->flashdata('sm_verification')) {
                                 <hr/>
                                 <h3><img src="<?php echo base_url(); ?>public/images/icon-01.png" width="25"> numbers & letters to reach you with</h3>
                                 <div class="col-md-8 col-padding-no">
-                                    <div class="custom-input-group">
+                                    <div class="custom-input-group" >
                                         <input type="text" name="profile_data[users][email]" class="form-control email" placeholder="email address" value="<?php echo $profileData->email; ?>">
                                         <p>
 
@@ -197,7 +197,7 @@ if ($this->session->flashdata('sm_verification')) {
                                                 list($id, $email, $isVerified, $verificationCode) = explode(',', $thisOtherEmail);
                                         ?>
 
-                                        <div class="custom-input-group">
+                                        <div class="custom-input-group" >
                                             <input type="hidden" name="profile_data[users_email][is_verified][]" value="<?php echo $isVerified; ?>"/>
                                             <input type="hidden" name="profile_data[users_email][verification_code][]" value="<?php echo $verificationCode; ?>"/>
                                             <input type="text" name="profile_data[users_email][email][]" class="form-control email" placeholder="email address" value="<?php echo $email; ?>">
@@ -244,7 +244,7 @@ if ($this->session->flashdata('sm_verification')) {
                                                 list($id, $prefix, $number, $isVerified, $contactVerificationCode) = explode(',', $thisOtherContact);
                                         ?>
 
-                                        <div class="custom-input-group">
+                                        <div class="custom-input-group" >
                                             <input type="hidden" name="profile_data[users_contact][is_verified][]" value="<?php echo $isVerified; ?>"/>
                                             <input type="hidden" name="profile_data[users_contact][contact_verification_code][]" value="<?php echo $contactVerificationCode; ?>"/>
                                             <input type="text" name="profile_data[users_contact][prefix][]" class="form-control stdCode prefix" placeholder="Prefix" value="<?php echo $prefix; ?>">

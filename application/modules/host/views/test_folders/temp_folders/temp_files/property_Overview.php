@@ -24,7 +24,7 @@ include('subheader.php');
                         <div class="frm-body col-md-9">
                             <form method="POST" class="form-horizontal" action="<?php echo base_url();?>host/property_overview">
                                 <h2>OVERVIEW</h2>
-                                <h3>A title and summary displayed on your public listing page</h3>
+                                <h3></h3>
                                 <p class="frm-label">
                                     TITLE
                                 </p>

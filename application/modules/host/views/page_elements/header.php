@@ -50,7 +50,9 @@
                 height: 500%;
                 display: none;
             }
-        </style>
+			#container{ width:1280px; margin:0 auto; display:block; background:#fff;}
+
+			        </style>
         
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -85,12 +87,13 @@
             var base_url = "<?php echo base_url(); ?>";
         </script>
     </head>
-    <body ng-app="rnr" style="background-color: #ffffff;">
+    <div id="container">
+    <body ng-app="rnr" style="background-color: #f69ea0;">
         <div id="overlay" style="display:none;"></div>
         <section id="container">
             <!--header start-->
             <header class="header fixed-top clearfix">
-                <div class="container-fluid">
+                <div class="">
                     <div class="row">
                         <!--logo start-->
                         <div class="brand">
@@ -347,7 +350,7 @@
                             <div class="col-md-1 <?php echo ('host' == $this->router->class && in_array($this->router->method, array('properties', 'editproperty', 'propertydetails', 'createproperty', 'editproperty', 'propertylisting'))) ? 'active' : ''; ?>">
                                 <p><a href="<?php echo site_url('/host/properties'); ?>">Properties</a></p>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-2">
                                 <p><a href="javascript:void(0);">invite friends</a></p>
                             </div>
                         </div>
@@ -359,5 +362,5 @@
                 </div>
             </header>
             <!--header end--> 
-        </section>
+        </section></body>
         <!--sidebar end-->

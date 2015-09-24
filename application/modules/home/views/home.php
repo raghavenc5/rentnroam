@@ -185,7 +185,7 @@
 				<img src="<?php echo $event_image?>" alt="grapes-bottle" class="left-overflow-image" />
 				<div class="happening-text">
 					<h2>What’s Happening?</h2>
-					<p>
+					<p style="width:100%;">
 							<?php echo $event->description; ?><a href="<?php echo base_url(); ?>home/eventHappenings">view all</a>
 					</p>
 					<div class="pink-separator"></div><!-- end pink-separator -->

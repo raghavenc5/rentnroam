@@ -3,7 +3,7 @@
 echo $header;
 ?>
 
-<div class="container" style="padding-top: 180px;">
+<div class="container" style="padding-top: 165px;">
     <div class="row">
 		<div class="col-md-12">
 			

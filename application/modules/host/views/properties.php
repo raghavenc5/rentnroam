@@ -104,7 +104,7 @@ echo $header;
     <div class="row">
     	<div class="col-md-12 table-responsive">
     		<table class="table table-striped">
-    			<thead>
+    			<thead  style="margin-bottom:15px; color:#222; font-size:17px; padding-bottom:25px;">
     				<tr>
     					<td>
     						<input type="checkbox" name="bulk_record_selector" id="bulk_record_selector"/>
@@ -126,6 +126,7 @@ echo $header;
     					<td><strong>Options</strong></td>
     				</tr>
     			</thead>
+                
     			<tbody>
     				<?php
     				if ($propertySearchData && ! $properties):

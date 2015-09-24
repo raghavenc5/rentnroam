@@ -52,12 +52,12 @@
 
 .registrationModal .facebook, .registrationModal .facebook:hover, .registrationModal .facebook:focus, .registrationModal .facebook:active, .registrationModal .facebook:visited {
   color: #ffffff;
-  background-color: #3B589C;
+  background-color: #3B589C; padding-left:54px;
 }
 
 .registrationModal .google, .registrationModal .google:hover, .registrationModal .google:focus, .registrationModal .google:active, .registrationModal .google:visited {
   background-color: #ffffff;
-  color: #55a018;
+  color: #55a018; padding-left:54px;
 }
 
 .registrationModal  .row > #orText {
@@ -128,13 +128,16 @@
   text-decoration: none;
   color: #C2185b;
 }
+.google-icon{ background:url(img/google.png) no-repeat left center;  }
+.facebook-icon{ background:url(img/facebook-login.png) no-repeat left center;  }
+
 
 .registrationModal .logInSubmit {
   background-color: #e91e63;
   color: #ffffff;
   width: 100%;
   border: 0px;
-  border-radius: 0px;
+  border-radius: 0px; margin-bottom:10px;
   font-size: 17px;
   padding: 7px 15px
 }
@@ -147,10 +150,10 @@
 
 .registrationModal .signUpLink a, .registrationModal .signUpLink a:hover {
   color: #c2185b;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
   text-transform: none;
-  font-weight: 400;
+  font-weight:bold !important;
 }
 
 .modal {
@@ -158,5 +161,5 @@
 }
 
 .registrationModal .modal-dialog {
-  width: 25%;
+  width:19%;
 }

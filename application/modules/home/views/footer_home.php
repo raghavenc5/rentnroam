@@ -3,8 +3,8 @@
 </div>
 <div id="footer">
 		<div class="centered-content">
-			<ul class="footer-cols">
-				<li>
+			<ul class="footer-cols" >
+				<li style="padding-top:25px;">
 					<h4>See homes</h4>
 					<ul>
 						<li><a href="#">Alibaug</a></li>
@@ -21,7 +21,7 @@
 						<li><a href="<?php echo base_url(); ?>home/eventHappenings">Events &amp; Happenings</a></li>
 					</ul>
 				</li>
-				<li>
+				<li >
 					<h4>EXPERIENCE</h4>
 					<ul>
 						<li><a href="<?php echo base_url(); ?>home/peopleStories">People Stories</a></li>

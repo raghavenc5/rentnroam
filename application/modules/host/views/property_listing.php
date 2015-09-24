@@ -12,18 +12,20 @@ $propertyId = $propertyDetails->property_id;
 <style>
     .help-block {
         color: #EA1B64 !important;
-        font-weight: bold !important;
+        font-weight: lighter !important;
     }
     .help-block-alt {
         color: #3c763d !important;
-        font-weight: bold !important;
+        font-weight:lighter !important;
     }
     .footer h5 {
         font-weight: 500;
         color: #c2185b !important;
     }
+	 
+	
 </style>
-<div class="container" style="padding-top: 180px;">
+<div class="container" style="padding-top: 165px;">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="global_error_handler alert alert-danger" style="display:none;">
@@ -39,6 +41,7 @@ $propertyId = $propertyDetails->property_id;
 		</div>
 	</div>
     <br/>
+    <div class="property-mrg">
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-2"> <!-- required for floating -->
@@ -237,31 +240,32 @@ $propertyId = $propertyDetails->property_id;
                                     <!-- add textbox and buttons here -->
                                     <table id="addRooms" class="table">
                                         <thead>
-                                            <tr>
+                                            <tr >
                                                 <th></th>
                                                 <th></th>
                                                 <th></th>
                                                 <th></th>
                                                 <th></th>
                                                 <th>
-                                                    <img id="addRoomsBtn" src="<?php echo base_url()?>public/images/details_open.png" alt="Add More">
+                                                    <img id="addRoomsBtn" src="<?php echo base_url()?>public/images/details_open.png" alt="Add More" style="margin-bottom:10px;">
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        
                                             
                                             <?php
                                             if ($childPropertyDetails) {
                                                 foreach ($childPropertyDetails as $key => $thisChildProperty) {
                                             ?>
-                                            
+                                             
                                             <tr>
                                                 <form name="manage_room_form" class="manage_room_forms" action="<?php echo site_url('/host/saveRoomDetails'); ?>" method="post">
-                                                    <td>
-                                                        <input type="text" class="form-control input-lg txtRoom room_names" placeholder="Room Name" name="room_name" value="<?php echo $thisChildProperty->property_title ? $thisChildProperty->property_title : ''; ?>"/>                                                                                <span class="help-block room_name_errors" style="display: none;">Please enter room name</span>
+                                                    <td >
+                                                        <input type="text" class="form-control input-lg txtRoom room_names mrg" placeholder="Room Name" name="room_name" value="<?php echo $thisChildProperty->property_title ? $thisChildProperty->property_title : ''; ?>"/>                                                                                <span class="help-block room_name_errors" style="display: none;">Please enter room name</span>
                                                     </td>
                                                     <td>
-                                                        <div class="col-md-6 styled-select styled-select-short">
+                                                        <div class="col-md-6 styled-select styled-select-short mrg">
                                                             <select class="form-control room_types" name="room_type">
                                                                 <option value="">-Select One-</option>
                                                                 <option value="1" <?php echo ($thisChildProperty->room_type_id == 1) ? 'selected' : ''; ?>>Private</option>
@@ -272,7 +276,7 @@ $propertyId = $propertyDetails->property_id;
                                                         <span class="help-block room_type_errors" style="display: none;">Please select room type</span>
                                                     </td>
                                                     <td>
-                                                        <div class="col-md-6 styled-select styled-select-short">
+                                                        <div class="col-md-6 styled-select styled-select-short mrg">
                                                             <select class="form-control guest_allowed" name="guest_allowed">
                                                                 <option value="">-select One-</option>
                                                                 <option value="1" <?php echo ($thisChildProperty->guest_allow == '1') ? 'selected' : ''; ?>>1</option>
@@ -289,14 +293,19 @@ $propertyId = $propertyDetails->property_id;
                                                         </div>
                                                         <span class="help-block guest_allowed_errors" style="display: none;">Please select guest allowed</span>
                                                     </td>
-                                                    <td>
-                                                        <a href="javascript:void(0);" class="button-pink btn btn-default pull-left manage_room_button">Add</a>
+                                                    <td> 
+                                                    <div class="mrg1">
+                                                        <a href="javascript:void(0);" class="button-pink btn btn-default pull-left manage_room_button mrg">Add</a>
                                                         
                                                         <input type="hidden" name="property_id" class="property_ids"  value="<?php echo $thisChildProperty->property_id; ?>"/>
                                                         <input type="hidden" value="" name="is_room_data_submitted" class="room_data_submitted"/>
                                                         <input type="hidden" value="" name="is_room_data_visited" class="room_data_visited"/>
+                                                        </div>
                                                     </td>
-                                                    <td><a href="<?php echo site_url("/host/propertylisting/$thisChildProperty->property_id"); ?>" class="button-pink btn btn-default pull-left edit_this_room">Edit</a></td>
+                                                    
+                                                    <td>
+                                                    <div class="mrg1">
+                                                    <a href="<?php echo site_url("/host/propertylisting/$thisChildProperty->property_id"); ?>" class="button-pink btn btn-default pull-left edit_this_room ">Edit</a></div></td>
                                                     <td class="remove">
                                                         <img class="removeRoomsBtn remove_this_room" src="<?php echo base_url()?>public/images/closex.png" alt="Remove">
                                                     </td>
@@ -530,7 +539,7 @@ $propertyId = $propertyDetails->property_id;
                                                 ?>
                                                 
                                                 <tr>
-                                                    <th scope="row" class="pull-left"><?php echo $thisPeriodType->period; ?></th>
+                                                    <th scope="row" class="pull-left" width="5%"><?php echo $thisPeriodType->period; ?></th>
                                                     
                                                     <?php
                                                     foreach ($seasonTypes as $key3 => $thisSeasonType) {
@@ -548,10 +557,10 @@ $propertyId = $propertyDetails->property_id;
                                                         }
                                                     ?>
                                                     
-                                                    <td>
+                                                    <td width="95%">
                                                         <div class="input-group">
                                                             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-inr"></i></span>
-                                                            <input type="text" id="<?php echo $thisSeasonType->season_type . '_' . $thisPeriodType->period; ?>" name="price[<?php echo $count++; ?>]" class="form-control prices" placeholder="2499" aria-describedby="basic-addon1" value="<?php echo $thisPrice; ?>" <?php echo $disabledPrice; ?>>
+                                                            <input type="text" id="<?php echo $thisSeasonType->season_type . '_' . $thisPeriodType->period; ?>" name="price[<?php echo $count++; ?>]" class="form-control prices price" placeholder="2499" aria-describedby="basic-addon1" value="<?php echo $thisPrice; ?>" <?php echo $disabledPrice; ?>>
                                                             <input type="hidden" name="master_price_period_id[]" value="<?php echo $thisPeriodType->id; ?>"/>
                                                             <input type="hidden" name="master_price_seasontype_id[]" value="<?php echo $thisSeasonType->id; ?>"/>
                                                         </div><div><p id="sd1"></p></div>
@@ -722,8 +731,8 @@ $propertyId = $propertyDetails->property_id;
                                             </div>
                                             <div id="collapseOne" class="panel-collapse collapse in amenityCategories" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="panel-body col-padding-no">
-                                                    <div class="col-md-4 col-xs-12 checkbox-container">
-                                                        <div class="amenities-checkbox">
+                                                    <div class="col-md-12 col-xs-12 checkbox-container">
+                                                        <div class="amenities1-checkbox">
                                                             <?php
                                                             $count = 0;
                                                             
@@ -731,8 +740,8 @@ $propertyId = $propertyDetails->property_id;
                                                                 if (1 == $thisAmenity->amenities_type):
                                                                     $count++;
                                                             ?>
-                                                            <input id="common_amenities_check_<?php echo $key; ?>" name="common_amenities[]" type="checkbox" class="common amenities" value="<?php echo $thisAmenity->amenities_id; ?>" <?php echo in_array($thisAmenity->amenities_id, $amenitiesList) ? 'checked' : ''; ?>>
-                                                            <label for="common_amenities_check_<?php echo $key; ?>"><?php echo $thisAmenity->amenities_subtype; ?></label>
+                                                            <input id="common_amenities_check_<?php echo $key; ?>" name="common_amenities[]" type="checkbox"  class="common amenities" value="<?php echo $thisAmenity->amenities_id; ?>" <?php echo in_array($thisAmenity->amenities_id, $amenitiesList) ? 'checked' : ''; ?>>
+                                                            <label for="common_amenities_check_<?php echo $key; ?>" ><?php echo $thisAmenity->amenities_subtype; ?></label>
                                                             <?php 
                                                                 endif;
                                                             endforeach;
@@ -759,8 +768,8 @@ $propertyId = $propertyDetails->property_id;
                                             </div>
                                             <div id="collapseTwo" class="panel-collapse collapse amenityCategories" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="panel-body col-padding-no">
-                                                    <div class="col-md-4 col-xs-12 checkbox-container">
-                                                        <div class="amenities-checkbox">
+                                                    <div class="col-md-12 col-xs-12 checkbox-container">
+                                                        <div class="amenities1-checkbox">
                                                             <?php
                                                             $count = 0;
                                                             
@@ -796,8 +805,8 @@ $propertyId = $propertyDetails->property_id;
                                             </div>
                                             <div id="collapseThree" class="panel-collapse collapse amenityCategories" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="panel-body col-padding-no">
-                                                    <div class="col-md-4 col-xs-12 checkbox-container">
-                                                        <div class="amenities-checkbox">
+                                                    <div class="col-md-12 col-xs-12 checkbox-container">
+                                                        <div class="amenities1-checkbox">
                                                             <?php
                                                             $count = 0;
                                                             
@@ -833,8 +842,8 @@ $propertyId = $propertyDetails->property_id;
                                             </div>
                                             <div id="collapseFour" class="panel-collapse collapse amenityCategories" role="tabpanel" aria-labelledby="headingOne">
                                                 <div class="panel-body col-padding-no">
-                                                    <div class="col-md-4 col-xs-12 checkbox-container">
-                                                        <div class="amenities-checkbox">
+                                                    <div class="col-md-12 col-xs-12 checkbox-container">
+                                                        <div class="amenities1-checkbox">
                                                             <?php
                                                             $count = 0;
                                                             
@@ -1124,7 +1133,7 @@ $propertyId = $propertyDetails->property_id;
                                     <input type="text" id="address_line1" name="address_line1" class="form-control input-lg" placeholder="ADDRESS LINE 1" value="<?php echo (isset($propertyDetails->address_line1) && $propertyDetails->address_line1) ? $propertyDetails->address_line1 : ''; ?>">
                                     <input type="text" id="address_line2" name="address_line2" class="form-control input-lg margin-top-30" placeholder="ADDRESS LINE 2">
                                     <div class="select-container col-md-12 col-padding-no" style="margin-top: 15px;">
-                                        <div class="col-md-6 styled-select">
+                                        <div class="col-md-5 styled-select">
                                             <select name="country" id="country-list" class="demoInputBox form-control" onchange="selectState(this.options[this.selectedIndex].value)" >
                                                <option value="">Select country</option>
                                                <?php
@@ -1136,7 +1145,7 @@ $propertyId = $propertyDetails->property_id;
                                                ?>
                                             </select>
                                         </div>
-                                        <div class="col-md-6 styled-select margin-left-30">
+                                        <div class="col-md-4 styled-select">
                                             <select name="state" id="state_dropdown" onchange="selectCity(this.options[this.selectedIndex].value)" class="form-control">
                                                <option value="">Select state</option>
                                                <?php
@@ -1154,7 +1163,7 @@ $propertyId = $propertyDetails->property_id;
                                         <div class="col-md-6" style="padding-left:0px;" id="no_state_error"></div>
                                     </div>
                                     <div class="select-container col-md-12 col-padding-no" style="margin-top: 0px;">
-                                        <div class="col-md-6 styled-select">
+                                        <div class="col-md-5 styled-select">
                                             <select name="city" id="city_dropdown" class="form-control">
                                                 <option value="">Select city</option>
                                                 <?php
@@ -1167,7 +1176,7 @@ $propertyId = $propertyDetails->property_id;
                                             </select>
 
                                         </div>
-                                        <div class="col-md-6 styled-select margin-left-30">
+                                        <div class="col-md-4 styled-select margin-left-30">
 
                                              <input id="area" class="form-control input-lg" name="area" type="text" placeholder="Area" value="<?php echo (isset($propertyDetails->area) && $propertyDetails->area) ? filterDbOutput($propertyDetails->area) : ''; ?>">
                                         </div>
@@ -1192,7 +1201,7 @@ $propertyId = $propertyDetails->property_id;
                             <div class="clearfix"></div>
                             <div class="map-container">
 
-								<input onclick="deleteMarkers();" type=button value="Delete Markers">
+								<input onclick="deleteMarkers();" type=button value="Delete Markers" class="delete-marker" style="background:red; padding:7px 25px; color:#fff; border:none; font-size:18px; ">
 								<div id="map-canvas" style="width:100%;"></div>
                             </div>
                             <input type="hidden" name="latitude" id="lat" value="<?php echo (isset($propertyDetails->latitude) && $propertyDetails->latitude) ? $propertyDetails->latitude : 22.572645; ?>">
@@ -1219,6 +1228,8 @@ $propertyId = $propertyDetails->property_id;
         </div>
     </div>
 </div>
+</div><!--property mrg -->
+
 
 <!-- calendar modal starts -->
 

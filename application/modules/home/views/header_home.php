@@ -55,9 +55,9 @@
 						 $sessionData['last_name'];
 						 }
         	?>
-					    <span class="username">Welcome, <?php echo $userName; ?></span> <i class="fa fa-angle-down"></i> 
+					    <span class="username" style="padding-top:40px; font-size:13px; color:#222; margin-left:15px; padding-right:15px; display:inline-block">Welcome, <?php echo $userName; ?></span> <i class="fa fa-angle-down"></i> 
 					
-        	<li><a href="<?php echo site_url('/host/dashboard'); ?>"><i class=" fa fa-suitcase"></i>Account</a></li>
+        	<li class="account"><a href="<?php echo site_url('/host/dashboard'); ?>"> Account</a></li>
     		<?php
               if ('googleplus' == $sessionData['user_source']):
             ?>

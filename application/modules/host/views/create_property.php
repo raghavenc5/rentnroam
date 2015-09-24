@@ -7,9 +7,11 @@ $this->load->view("page_elements/header");
         </script>
         <div class="container">
             <div class="row">
+            <div class="center-mrg">
                 <div class="content-box">
                     <h1>Got a spare room or an entire house?</h1>
                     <h4>Rent and Roam lets you make money renting out your place.</h4>
+                </div>
                 </div>
             </div>
         </div>
@@ -124,6 +126,7 @@ $this->load->view("page_elements/header");
         <form ng-controller="frmCreateYourPropertyCtrl" class="form-horizontal" method="post" action="<?php echo base_url();?>host/Createhostproperty" name="create_property_form" id="create_property_form">
             <div class="sec-01">
                 <div class="container">
+                <div class="center-mrg">
                     <br/>
                     <div class="errorHandler alert alert-danger" style="display:none;">
                         <strong>You have some form errors. Please check below.</strong>
@@ -359,7 +362,7 @@ $this->load->view("page_elements/header");
                         value="Continue" 
                         onclick="return registerUser('<?php echo ($host_id) ? $host_id : null; ?>');" />
                 </div>
-            </div>
+</div>            </div>
         </form>
         <div class="clearfix"></div>
         <div class="sec-02 padding-bot-20">

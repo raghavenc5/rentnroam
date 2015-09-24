@@ -2,7 +2,7 @@
 echo $header;
 ?>
 
-<div class="container" style="padding-top: 180px;">
+<div class="container" style="padding-top: 165px;">
     <div class="col-md-4 col-padding-no">
         <div class="img-back text-center">
             <img src="<?php echo base_url(); ?>public/images/host-big.png" alt="Host" class="img-circle">

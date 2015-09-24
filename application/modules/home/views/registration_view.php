@@ -2,11 +2,11 @@
 		<div class="modal-content">
 			<div class="modal-body">
 				<div class="row">
-					<a class="google loginSocial" href="<?php echo ($gpAuthUrl) ? $gpAuthUrl : '#'; ?>">
-						<i class="fa fa-google-plus"></i>sign up with google
+					<a class="google loginSocial google-icon" href="<?php echo ($gpAuthUrl) ? $gpAuthUrl : '#'; ?>">
+						 sign up with google
 					</a><br/>
-					<a class="facebook loginSocial" href="<?php echo ($fbLoginUrl) ? $fbLoginUrl : '#'; ?>">
-						<i class="fa fa-facebook"></i>sign up with facebook
+					<a class="facebook loginSocial facebook-icon" href="<?php echo ($fbLoginUrl) ? $fbLoginUrl : '#'; ?>">
+						 sign up with facebook
 					</a>
 					<p id="orText"><span>or</span></p>
 					<p class="mail"><i class="fa fa-envelope-o"></i> sign up with email</p>

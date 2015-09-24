@@ -22,7 +22,7 @@
                                                     echo "Your property ID: ".$propId;
                                                 }
                                             ?>
-        <div class="container" style="padding-top: 180px;">
+        <div class="container" style="padding-top: 165px;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-2"> <!-- required for floating -->
@@ -726,7 +726,7 @@
                                     <div class="frm-body col-md-9 col-padding-no">
                                         <form class="form-horizontal" id="formInfo">
                                             <h2>LISTING INFORMATION</h2>
-                                            <h3></h3>
+                                            <h3>A title and summary displayed on your public listing page</h3>
                                             <hr/>
                                             <div class="select-container">
                                                 <div class="col-md-6 col-padding-no">
